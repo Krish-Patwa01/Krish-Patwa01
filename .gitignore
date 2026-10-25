@@ -1,0 +1,11 @@
+# The source photo never gets pushed — only the generated SVG portrait does.
+assets/
+
+# Local scratch/debug output from tuning the pipeline.
+svg/*-preview.txt
+svg/debug-*.png
+svg/preview.html
+
+__pycache__/
+*.pyc
+.venv/
