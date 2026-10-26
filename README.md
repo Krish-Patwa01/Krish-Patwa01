@@ -1,4 +1,4 @@
-<table><tr><td align="center">
+<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="svg/portrait-dark.svg">
@@ -81,4 +81,4 @@ Python · TypeScript · React · Node
 email → you@example.com · linkedin → linkedin.com/in/your-handle
 </samp>
 
-</td></tr></table>
+</div>
