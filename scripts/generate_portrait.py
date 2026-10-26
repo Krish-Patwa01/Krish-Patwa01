@@ -105,7 +105,12 @@ def build_svg(lines: list[str], ink_color: str, font_b64: str) -> str:
     )
     parts.append(f"<style>{font_face}"
                   f"text{{font-family:'PortraitRamp',ui-monospace,monospace;"
-                  f"font-size:{FONT_SIZE}px;fill:{ink_color};}}"
+                  f"font-size:{FONT_SIZE}px;fill:{ink_color};"
+                  # Chrome's SVG2 text layout follows CSS white-space, not
+                  # xml:space — without this, runs of leading spaces (which
+                  # form the actual silhouette) collapse and every row
+                  # slams to x=0, smearing the whole portrait leftward.
+                  f"white-space:pre;}}"
                   f".cursor{{fill:{ink_color};}}</style>")
 
     for i, line in enumerate(lines):

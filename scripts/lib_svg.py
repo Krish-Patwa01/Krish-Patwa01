@@ -29,7 +29,8 @@ def svg_open(width_px: float, height_px: float, display_width: int, label: str) 
 def style_block(font_face_css: str, ink: str, muted: str, extra: str = "") -> str:
     return (
         f"<style>{font_face_css}"
-        f"text{{font-family:'{FONT_FAMILY}',ui-monospace,monospace;fill:{ink};}}"
+        f"text{{font-family:'{FONT_FAMILY}',ui-monospace,monospace;fill:{ink};"
+        f"white-space:pre;}}"
         f".muted{{fill:{muted};}}"
         f".rule{{stroke:{muted};stroke-width:1;}}"
         f"{extra}</style>"

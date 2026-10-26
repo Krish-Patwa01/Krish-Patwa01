@@ -145,7 +145,7 @@ def _svg_header(width: float, height: float, display_width: int, label: str, ext
         f'viewBox="0 0 {width:.2f} {height:.2f}" width="{display_width}" '
         f'role="img" aria-label="{xml_escape(label)}">'
         f"<style>{_data_font_css()}"
-        f"text{{font-family:'{FONT_FAMILY}',ui-monospace,monospace;}}"
+        f"text{{font-family:'{FONT_FAMILY}',ui-monospace,monospace;white-space:pre;}}"
         f"{extra_style}</style>"
     )
 
